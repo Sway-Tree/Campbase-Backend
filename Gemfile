@@ -42,6 +42,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'pry'
+
+gem 'rack-cors', :require => 'rack/cors'
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
