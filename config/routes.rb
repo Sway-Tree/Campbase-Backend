@@ -1,4 +1,13 @@
 Backend::Application.routes.draw do
+  
+  devise_for :users
+
+  devise_scope :user do
+    get 'user', :to => "user#index"
+  end
+
+  root :to => "trips#index"
+
   resources :trips
 
   # The priority is based upon order of creation: first created -> highest priority.

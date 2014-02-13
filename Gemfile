@@ -46,6 +46,10 @@ gem 'pry'
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'devise'
+
+gem 'declarative_authorization'
+
 
 
 # Use ActiveModel has_secure_password
