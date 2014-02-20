@@ -9,7 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :address_street,     :null => false, :default => ""
       t.string :address_town,       :null => false, :default => ""
       t.string :tshirt_size,        :null => false, :default => ""
-      t.boolean :admin,             :null => false, :default => true
+      t.boolean :admin,             :null => false, :default => false
 
       ## Recoverable
       t.string   :reset_password_token
