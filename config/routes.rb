@@ -8,6 +8,7 @@ Backend::Application.routes.draw do
 
   resources :trips do
     get 'enroll', :to => "trips#enroll"
+    get 'participants', :to => "trips#participants"
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

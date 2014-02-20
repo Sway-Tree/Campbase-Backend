@@ -64,11 +64,12 @@ class TripsController < ApplicationController
   def enroll
     trip = Trip.find(params.fetch(:trip_id))
     user = current_user
-    render :json => [trip.id, user.id]
     trip.users << user
     trip.save!
-    #tripuser = TripUser.new(trip.id, user.id)
-    #render :json => TripUser.all
+  end
+
+  def participants
+    render :json => Trip.find(params.fetch(:trip_id)).users
   end
 
   private
