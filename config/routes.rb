@@ -2,13 +2,13 @@ Backend::Application.routes.draw do
   
   devise_for :users
 
-  devise_scope :user do
-    get 'user', :to => "user#index"
-  end
+  get 'user', :to => "user#info"
 
   root :to => "trips#index"
 
-  resources :trips
+  resources :trips do
+    get 'enroll', :to => "trips#enroll"
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

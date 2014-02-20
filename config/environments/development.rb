@@ -29,6 +29,4 @@ Backend::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  config.http_authenticatable_on_xhr = false
-  config.navigational_formats = ["*/*", :html, :json]
 end

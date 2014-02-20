@@ -1,5 +1,5 @@
-class UserController < Devise::SessionsController
-	def index
-		render :json => [current_user.email]
+class UserController < ApplicationController
+	def info
+		render :json => current_user
 	end
 end

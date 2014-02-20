@@ -61,6 +61,16 @@ class TripsController < ApplicationController
     end
   end
 
+  def enroll
+    trip = Trip.find(params.fetch(:trip_id))
+    user = current_user
+    render :json => [trip.id, user.id]
+    trip.users << user
+    trip.save!
+    #tripuser = TripUser.new(trip.id, user.id)
+    #render :json => TripUser.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip
